@@ -1,25 +1,14 @@
-
----
-
-## Exemple de **script d’installation** : `installation.sh`
-
-> **Remarque** :  
-> - Ce script cible **Debian/Ubuntu** (qui utilisent APT).  
-> - Il installe Netdata en **version statique** (pour éviter les soucis de dépendances).  
-> - Il ouvre le port **19999** via **ufw** s’il est installé, sinon via **iptables**.  
-
-```bash
 #!/usr/bin/env bash
 #
-# installation.sh
+# bash.sh
 # Script d'installation automatique de Netdata (version statique)
 # pour Debian/Ubuntu (ou distributions dérivées).
 #
 
-set -e  # Quitter en cas d'erreur
+set -e  # Quitter le script en cas d'erreur
 set -u  # Erreur si variable non initialisée
 
-# Vérifier si on est root
+# Vérifie si l'utilisateur est root
 if [[ $EUID -ne 0 ]]; then
   echo "Merci de lancer ce script en tant que root (ou avec sudo)."
   exit 1
@@ -63,3 +52,5 @@ echo "============================================"
 echo "     INSTALLATION TERMINEE !"
 echo " Accès Web : http://[IP_SERVEUR]:19999"
 echo "============================================"
+
+rm ./installation.sh

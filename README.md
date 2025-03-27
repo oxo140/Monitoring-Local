@@ -11,4 +11,4 @@ Exécutez les **4 commandes** suivantes :
 sudo apt update && sudo apt install curl -y
 curl -O https://raw.githubusercontent.com/oxo140/Monitoring-Local/main/installation.sh
 chmod +x installation.sh
-sudo ./installation.sh
+sudo ./installation.sh -y

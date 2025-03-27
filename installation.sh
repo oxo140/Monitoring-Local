@@ -50,7 +50,7 @@ systemctl status netdata --no-pager || true
 
 echo "============================================"
 echo "     INSTALLATION TERMINEE !"
-echo " Accès Web : http://[IP_SERVEUR]:19999"
+echo " Accès Web : http://localhost:19999"
 echo "============================================"
 
 rm ./installation.sh
